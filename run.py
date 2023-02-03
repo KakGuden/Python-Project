@@ -74,8 +74,6 @@ def hardAdditionOver():
     elif nextGame == "2":
         game()
 
-
-
 def subtraction():
     difficulty = input("Select between Easy,Normal or Hard")
     if difficulty == "Easy":
@@ -149,6 +147,78 @@ def hardSubtractionOver():
         game()
 
 
+
+def division():
+    difficulty = input("Select between Easy,Normal or Hard")
+    if difficulty == "Easy":
+        easyDivision()
+    elif difficulty == "Normal":
+        normalDivision()
+    elif difficulty == "Hard":
+        hardDivision()
+    else:
+        print("Please enter a valid option")
+        division()
+
+def easyDivision():
+    easy1 = random.randint(1,10)
+    easy2 = random.randint(1,10)
+    answer = int(input(f"What is {easy1} / {easy2}?"))
+    correct = easy1 / easy2
+    if answer == correct:
+        print("Well done")
+        easyDivisionOver()
+    else:
+        print("Incorrect, the right answer was")
+        print(correct)
+        easyDivisionOver()
+
+def easyDivisionOver():
+    nextGame = input("Press 1 to go again or 2 to switch mode")
+    if nextGame == "1":
+        easyDivision()
+    elif nextGame == "2":
+        game()
+
+def normalDivision():
+    normal1 = random.randint(11,111)
+    normal2 = random.randint(11,111)
+    answer = int(input(f"What is {normal1} / {normal2}?"))
+    correct = normal1 / normal2
+    if answer == correct:
+        print("Well done")
+        normalDivision()
+    else:
+        print("Incorrect, the right answer was")
+        print(correct)
+        normalDivision()
+
+def normalDivisionOver():
+    nextGame = input("Press 1 to go again or 2 to switch mode")
+    if nextGame == "1":
+        normalDivision()
+    elif nextGame == "2":
+        game()
+
+def hardDivision():
+    hard1 = round(random.uniform(11,111),1)
+    hard2 = round(random.uniform(11,111),1)
+    answer = int(input(f"What is {hard1} / {hard2}?"))
+    correct = hard1 / hard2
+    if answer == correct:
+        print("Well done")
+        hardDivisionOver()
+    else:
+        print("Incorrect, the right answer was")
+        print(correct)
+        hardDivisionOver()
+
+def hardDivisionOver():
+    nextGame = input("Press 1 to go again or 2 to switch mode")
+    if nextGame == "1":
+        hardDivision()
+    elif nextGame == "2":
+        game()
 
 
 
