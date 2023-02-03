@@ -1,11 +1,11 @@
 import random
 
-def game():
-    print("please select game mode")
-    input("1 for addition, 2 for subtraction, 3 for multiplication and 4 for division")
-game()
+num1 = random.randint(1,10)
+num2 = random.randint(1,10)
 
 def addition():
-    num1 = random.randint(1,10)
-    print(num1)
+    answer = int(input(f"What is {num1} + {num2}?"))
+    correct = num1 + num2
+    if answer == correct:
+     print("well done")
 addition()
