@@ -10,6 +10,9 @@ def addition():
         normalAddition()
     elif difficulty == "Hard":
         hardAddition()
+    else:
+        print("Please enter a valid option")
+        addition()
 
 def easyAddition():
     easy1 = random.randint(1,10)
@@ -18,11 +21,18 @@ def easyAddition():
     correct = easy1 + easy2
     if answer == correct:
         print("Well done")
-        nextGame = input("Press 1 to go again or 2 to switch mode")
-        if nextGame == "1":
-            easyAddition()
-        elif nextGame == "2":
-            game()
+        easyAdditionOver()
+    else:
+        print("Incorrect, the right answer was")
+        print(correct)
+        easyAdditionOver()
+
+def easyAdditionOver():
+    nextGame = input("Press 1 to go again or 2 to switch mode")
+    if nextGame == "1":
+        easyAddition()
+    elif nextGame == "2":
+        game()
 
 def normalAddition():
     normal1 = random.randint(11,111)
@@ -51,4 +61,7 @@ def game():
         multiplication()
     elif gamemode == "4":
         division()  
+    else:
+        print("Please enter a valid option")
+        game()
 game()
