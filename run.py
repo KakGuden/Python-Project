@@ -9,20 +9,26 @@ hard2 = round(random.uniform(1, 100),1)
 def addition():
     difficulty = input("Select between Easy,Normal or Hard")
     if difficulty == "Easy":
-        answer = int(input(f"What is {easy1} + {easy2}?"))
-        correct = easy1 + easy2
-        if answer == correct:
-            print("Well done")
+        easyAddition()
     elif difficulty == "Normal":
-        answer = int(input(f"What is {normal1} + {normal2}?"))
-        correct = normal1 + normal2
-        if answer == correct:
-            print("Well done")
+        normalAddition()
     elif difficulty == "Hard":
-        answer = int(input(f"What is {hard1} + {hard2}?"))
-        correct = hard1 + hard2
-        if answer == correct:
-            print("Well done")
+        hardAddition()
+def easyAddition():
+    answer = int(input(f"What is {easy1} + {easy2}?"))
+    correct = easy1 + easy2
+    if answer == correct:
+        print("Well done")
+def normalAddition():
+    answer = int(input(f"What is {easy1} + {easy2}?"))
+    correct = easy1 + easy2
+    if answer == correct:
+        print("Well done")
+def hardAddition():
+    answer = int(input(f"What is {easy1} + {easy2}?"))
+    correct = easy1 + easy2
+    if answer == correct:
+        print("Well done")
 
 def subtraction():
     answer = int(input(f"What is {easy1} - {easy2}?"))
