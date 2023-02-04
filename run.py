@@ -33,6 +33,9 @@ def easyAdditionOver():
         easyAddition()
     elif nextGame == "2":
         game()
+    else:
+        print("Please select a valid option")
+        easyAdditionOver()
 
 def normalAddition():
     normal1 = random.randint(11,111)
@@ -53,6 +56,9 @@ def normalAdditionOver():
         normalAddition()
     elif nextGame == "2":
         game()
+    else:
+        print("Please select a valid option")
+        normalAdditionOver()
 
 def hardAddition():
     hard1 = round(random.uniform(11,111),1)
@@ -73,6 +79,9 @@ def hardAdditionOver():
         hardAddition()
     elif nextGame == "2":
         game()
+    else:
+        print("Please select a valid option")
+        hardAdditionOver()
 
 def subtraction():
     difficulty = input("Select between Easy,Normal or Hard")
@@ -105,6 +114,9 @@ def easySubtractionOver():
         easySubtraction()
     elif nextGame == "2":
         game()
+    else:
+        print("Please select a valid option")
+        easySubtractionOver()
 
 def normalSubtraction():
     normal1 = random.randint(11,111)
@@ -125,6 +137,9 @@ def normalSubtractionOver():
         normalSubtraction()
     elif nextGame == "2":
         game()
+    else:
+        print("Please select a valid option")
+        normalSubtractionOver()
 
 def hardSubtraction():
     hard1 = round(random.uniform(11,111),1)
@@ -145,8 +160,90 @@ def hardSubtractionOver():
         hardSubtraction()
     elif nextGame == "2":
         game()
+    else:
+        print("Please select a valid option")
+        hardSubtractionOver()
 
+def multiplication():
+    difficulty = input("Select between Easy,Normal or Hard")
+    if difficulty == "Easy":
+        easyMultiplication()
+    elif difficulty == "Normal":
+        normalMultiplication()
+    elif difficulty == "Hard":
+        hardMultiplication()
+    else:
+        print("Please enter a valid option")
+        multiplication()
 
+def easyMultiplication():
+    easy1 = random.randint(1,10)
+    easy2 = random.randint(1,10)
+    answer = int(input(f"What is {easy1} * {easy2}?"))
+    correct = easy1 * easy2
+    if answer == correct:
+        print("Well done")
+        easyMultiplicationOver()
+    else:
+        print("Incorrect, the right answer was")
+        print(correct)
+        easyMultiplicationOver()
+
+def easyMultiplicationOver():
+    nextGame = input("Press 1 to go again or 2 to switch mode")
+    if nextGame == "1":
+        easyMultiplication()
+    elif nextGame == "2":
+        game()
+    else:
+        print("Please select a valid option")
+        easyMultiplicationOver()
+
+def normalMultiplication():
+    normal1 = random.randint(11,111)
+    normal2 = random.randint(11,111)
+    answer = int(input(f"What is {normal1} * {normal2}?"))
+    correct = normal1 * normal2
+    if answer == correct:
+        print("Well done")
+        normalMultiplicationOver()
+    else:
+        print("Incorrect, the right answer was")
+        print(correct)
+        normalMultiplicationOver()
+
+def normalMultiplicationOver():
+    nextGame = input("Press 1 to go again or 2 to switch mode")
+    if nextGame == "1":
+        normalMultiplication()
+    elif nextGame == "2":
+        game()
+    else:
+        print("Please select a valid option")
+        normalMultiplicationOver()
+
+def hardMultiplication():
+    hard1 = round(random.uniform(11,111),1)
+    hard2 = round(random.uniform(11,111),1)
+    answer = int(input(f"What is {hard1} * {hard2}?"))
+    correct = hard1 * hard2
+    if answer == correct:
+        print("Well done")
+        hardMultiplicationOver()
+    else:
+        print("Incorrect, the right answer was")
+        print(correct)
+        hardMultiplicationOver()
+
+def hardMultiplicationOver():
+    nextGame = input("Press 1 to go again or 2 to switch mode")
+    if nextGame == "1":
+        hardMultiplication()
+    elif nextGame == "2":
+        game()
+    else:
+        print("Please select a valid option")
+        hardMultiplicationOver()
 
 def division():
     difficulty = input("Select between Easy,Normal or Hard")
@@ -179,6 +276,9 @@ def easyDivisionOver():
         easyDivision()
     elif nextGame == "2":
         game()
+    else:
+        print("Please select a valid option")
+        easyDivisionOver()
 
 def normalDivision():
     normal1 = random.randint(11,111)
@@ -199,6 +299,9 @@ def normalDivisionOver():
         normalDivision()
     elif nextGame == "2":
         game()
+    else:
+        print("Please select a valid option")
+        normalDivisionOver()
 
 def hardDivision():
     hard1 = round(random.uniform(11,111),1)
@@ -219,6 +322,9 @@ def hardDivisionOver():
         hardDivision()
     elif nextGame == "2":
         game()
+    else:
+        print("Please select a valid option")
+        hardDivisionOver()
 
 
 
