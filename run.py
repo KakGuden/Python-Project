@@ -63,7 +63,7 @@ def normalAdditionOver():
 def hardAddition():
     hard1 = round(random.uniform(11,111),1)
     hard2 = round(random.uniform(11,111),1)
-    answer = int(input(f"What is {hard1} + {hard2}?"))
+    answer = float(input(f"What is {hard1} + {hard2}?"))
     correct = hard1 + hard2
     if answer == correct:
         print("Well done")
@@ -144,7 +144,7 @@ def normalSubtractionOver():
 def hardSubtraction():
     hard1 = round(random.uniform(11,111),1)
     hard2 = round(random.uniform(11,111),1)
-    answer = int(input(f"What is {hard1} - {hard2}?"))
+    answer = float(input(f"What is {hard1} - {hard2}?"))
     correct = hard1 - hard2
     if answer == correct:
         print("Well done")
@@ -225,7 +225,7 @@ def normalMultiplicationOver():
 def hardMultiplication():
     hard1 = round(random.uniform(11,111),1)
     hard2 = round(random.uniform(11,111),1)
-    answer = int(input(f"What is {hard1} * {hard2}?"))
+    answer = float(input(f"What is {hard1} * {hard2}?"))
     correct = hard1 * hard2
     if answer == correct:
         print("Well done")
@@ -306,7 +306,7 @@ def normalDivisionOver():
 def hardDivision():
     hard1 = round(random.uniform(11,111),1)
     hard2 = round(random.uniform(11,111),1)
-    answer = int(input(f"What is {hard1} / {hard2}?"))
+    answer = float(input(f"What is {hard1} / {hard2}?"))
     correct = hard1 / hard2
     if answer == correct:
         print("Well done")
