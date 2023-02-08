@@ -379,6 +379,16 @@ def easyEndless():
         print("Incorrect, the right answer was")
         print(correct)
         easyEndlessOver()
+        
+def easyEndlessOver():
+    nextGame = input("Press 1 to go again or 2 to switch mode:\n")
+    if nextGame == "1":
+        easyEndless()
+    elif nextGame == "2":
+        game()
+    else:
+        print("Please select a valid option")
+        easyEndlessOver()
 
 def game(): 
     gamemode = input("Select gamemode:\n")
