@@ -339,8 +339,6 @@ def endless():
         print("Please enter a valid option")
         endless()
 
-
-
 def easyEndless():
     easy1 = random.randint(1,10)
     easy2 = random.randint(1,10)
@@ -389,6 +387,56 @@ def easyEndlessOver():
     else:
         print("Please select a valid option")
         easyEndlessOver()
+
+def normalEndless():
+    normal1 = random.randint(11,111)
+    normal2 = random.randint(11,111)
+    answer = int(input(f"What is {normal1} + {normal2}?:\n"))
+    correct = normal1 + normal2
+    if answer == correct:
+        normal1 = random.randint(11,111)
+        normal2 = random.randint(11,111)
+        answer = int(input(f"What is {normal1} - {normal2}?:\n"))
+        correct = normal1 - normal2
+        if answer == correct:
+            normal1 = random.randint(11,111)
+            normal2 = random.randint(11,111)
+            answer = float(input(f"What is {normal1} * {normal2}?:\n"))
+            correct = round(normal1 * normal2,2)
+            if answer == correct:
+                normal1 = random.randint(11,111)
+                normal2 = random.randint(11,111)
+                answer = float(input(f"What is {normal1} / {normal2}?:\n"))
+                correct = round(normal1 / normal2,2)
+                if answer == correct:
+                    normalEndless()
+                else:
+                    print("Incorrect, the right answer was")
+                    print(correct)
+                    normalEndlessOver()
+            else:
+                print("Incorrect, the right answer was")
+                print(correct)
+                normalEndlessOver()
+        else:
+            print("Incorrect, the right answer was")
+            print(correct)
+            normalEndlessOver()
+    else:
+        print("Incorrect, the right answer was")
+        print(correct)
+        normalEndlessOver()
+        
+def normalEndlessOver():
+    nextGame = input("Press 1 to go again or 2 to switch mode:\n")
+    if nextGame == "1":
+        normalEndless()
+    elif nextGame == "2":
+        game()
+    else:
+        print("Please select a valid option")
+        normalEndlessOver()
+
 
 def game(): 
     gamemode = input("Select gamemode:\n")
