@@ -2,8 +2,9 @@ import random
 
 
 
+
 def addition():
-    difficulty = input("Select between Easy,Normal or Hard")
+    difficulty = input("Select between Easy,Normal or Hard:\n")
     if difficulty == "Easy":
         easyAddition()
     elif difficulty == "Normal":
@@ -17,7 +18,7 @@ def addition():
 def easyAddition():
     easy1 = random.randint(1,10)
     easy2 = random.randint(1,10)
-    answer = int(input(f"What is {easy1} + {easy2}?"))
+    answer = int(input(f"What is {easy1} + {easy2}?:\n"))
     correct = easy1 + easy2
     if answer == correct:
         print("Well done")
@@ -28,7 +29,7 @@ def easyAddition():
         easyAdditionOver()
 
 def easyAdditionOver():
-    nextGame = input("Press 1 to go again or 2 to switch mode")
+    nextGame = input("Press 1 to go again or 2 to switch mode:\n")
     if nextGame == "1":
         easyAddition()
     elif nextGame == "2":
@@ -40,7 +41,7 @@ def easyAdditionOver():
 def normalAddition():
     normal1 = random.randint(11,111)
     normal2 = random.randint(11,111)
-    answer = int(input(f"What is {normal1} + {normal2}?"))
+    answer = int(input(f"What is {normal1} + {normal2}?:\n"))
     correct = normal1 + normal2
     if answer == correct:
         print("Well done")
@@ -51,7 +52,7 @@ def normalAddition():
         normalAdditionOver()
 
 def normalAdditionOver():
-    nextGame = input("Press 1 to go again or 2 to switch mode")
+    nextGame = input("Press 1 to go again or 2 to switch mode:\n")
     if nextGame == "1":
         normalAddition()
     elif nextGame == "2":
@@ -63,7 +64,7 @@ def normalAdditionOver():
 def hardAddition():
     hard1 = round(random.uniform(11,111),1)
     hard2 = round(random.uniform(11,111),1)
-    answer = float(input(f"What is {hard1} + {hard2}?"))
+    answer = float(input(f"What is {hard1} + {hard2}?:\n"))
     correct = hard1 + hard2
     if answer == correct:
         print("Well done")
@@ -74,7 +75,7 @@ def hardAddition():
         hardAdditionOver()
 
 def hardAdditionOver():
-    nextGame = input("Press 1 to go again or 2 to switch mode")
+    nextGame = input("Press 1 to go again or 2 to switch mode:\n")
     if nextGame == "1":
         hardAddition()
     elif nextGame == "2":
@@ -84,7 +85,7 @@ def hardAdditionOver():
         hardAdditionOver()
 
 def subtraction():
-    difficulty = input("Select between Easy,Normal or Hard")
+    difficulty = input("Select between Easy,Normal or Hard:\n")
     if difficulty == "Easy":
         easySubtraction()
     elif difficulty == "Normal":
@@ -98,7 +99,7 @@ def subtraction():
 def easySubtraction():
     easy1 = random.randint(1,10)
     easy2 = random.randint(1,10)
-    answer = int(input(f"What is {easy1} - {easy2}?"))
+    answer = int(input(f"What is {easy1} - {easy2}?:\n"))
     correct = easy1 - easy2
     if answer == correct:
         print("Well done")
@@ -109,7 +110,7 @@ def easySubtraction():
         easySubtractionOver()
 
 def easySubtractionOver():
-    nextGame = input("Press 1 to go again or 2 to switch mode")
+    nextGame = input("Press 1 to go again or 2 to switch mode:\n")
     if nextGame == "1":
         easySubtraction()
     elif nextGame == "2":
@@ -121,7 +122,7 @@ def easySubtractionOver():
 def normalSubtraction():
     normal1 = random.randint(11,111)
     normal2 = random.randint(11,111)
-    answer = int(input(f"What is {normal1} - {normal2}?"))
+    answer = int(input(f"What is {normal1} - {normal2}?:\n"))
     correct = normal1 - normal2
     if answer == correct:
         print("Well done")
@@ -132,7 +133,7 @@ def normalSubtraction():
         normalSubtraction()
 
 def normalSubtractionOver():
-    nextGame = input("Press 1 to go again or 2 to switch mode")
+    nextGame = input("Press 1 to go again or 2 to switch mode:\n")
     if nextGame == "1":
         normalSubtraction()
     elif nextGame == "2":
@@ -144,7 +145,7 @@ def normalSubtractionOver():
 def hardSubtraction():
     hard1 = round(random.uniform(11,111),1)
     hard2 = round(random.uniform(11,111),1)
-    answer = float(input(f"What is {hard1} - {hard2}?"))
+    answer = float(input(f"What is {hard1} - {hard2}?:\n"))
     correct = hard1 - hard2
     if answer == correct:
         print("Well done")
@@ -155,7 +156,7 @@ def hardSubtraction():
         hardSubtractionOver()
 
 def hardSubtractionOver():
-    nextGame = input("Press 1 to go again or 2 to switch mode")
+    nextGame = input("Press 1 to go again or 2 to switch mode:\n")
     if nextGame == "1":
         hardSubtraction()
     elif nextGame == "2":
@@ -165,7 +166,7 @@ def hardSubtractionOver():
         hardSubtractionOver()
 
 def multiplication():
-    difficulty = input("Select between Easy,Normal or Hard")
+    difficulty = input("Select between Easy,Normal or Hard:\n")
     if difficulty == "Easy":
         easyMultiplication()
     elif difficulty == "Normal":
@@ -179,7 +180,7 @@ def multiplication():
 def easyMultiplication():
     easy1 = random.randint(1,10)
     easy2 = random.randint(1,10)
-    answer = int(input(f"What is {easy1} * {easy2}?"))
+    answer = int(input(f"What is {easy1} * {easy2}?:\n"))
     correct = easy1 * easy2
     if answer == correct:
         print("Well done")
@@ -190,7 +191,7 @@ def easyMultiplication():
         easyMultiplicationOver()
 
 def easyMultiplicationOver():
-    nextGame = input("Press 1 to go again or 2 to switch mode")
+    nextGame = input("Press 1 to go again or 2 to switch mode:\n")
     if nextGame == "1":
         easyMultiplication()
     elif nextGame == "2":
@@ -202,7 +203,7 @@ def easyMultiplicationOver():
 def normalMultiplication():
     normal1 = random.randint(11,111)
     normal2 = random.randint(11,111)
-    answer = int(input(f"What is {normal1} * {normal2}?"))
+    answer = int(input(f"What is {normal1} * {normal2}?:\n"))
     correct = normal1 * normal2
     if answer == correct:
         print("Well done")
@@ -213,7 +214,7 @@ def normalMultiplication():
         normalMultiplicationOver()
 
 def normalMultiplicationOver():
-    nextGame = input("Press 1 to go again or 2 to switch mode")
+    nextGame = input("Press 1 to go again or 2 to switch mode:\n")
     if nextGame == "1":
         normalMultiplication()
     elif nextGame == "2":
@@ -225,7 +226,7 @@ def normalMultiplicationOver():
 def hardMultiplication():
     hard1 = round(random.uniform(11,111),1)
     hard2 = round(random.uniform(11,111),1)
-    answer = float(input(f"What is {hard1} * {hard2}?"))
+    answer = float(input(f"What is {hard1} * {hard2}?:\n"))
     correct = hard1 * hard2
     if answer == correct:
         print("Well done")
@@ -236,7 +237,7 @@ def hardMultiplication():
         hardMultiplicationOver()
 
 def hardMultiplicationOver():
-    nextGame = input("Press 1 to go again or 2 to switch mode")
+    nextGame = input("Press 1 to go again or 2 to switch mode:\n")
     if nextGame == "1":
         hardMultiplication()
     elif nextGame == "2":
@@ -246,7 +247,7 @@ def hardMultiplicationOver():
         hardMultiplicationOver()
 
 def division():
-    difficulty = input("Select between Easy,Normal or Hard")
+    difficulty = input("Select between Easy,Normal or Hard:\n")
     if difficulty == "Easy":
         easyDivision()
     elif difficulty == "Normal":
@@ -260,7 +261,7 @@ def division():
 def easyDivision():
     easy1 = random.randint(1,10)
     easy2 = random.randint(1,10)
-    answer = int(input(f"What is {easy1} / {easy2}?"))
+    answer = int(input(f"What is {easy1} / {easy2}?:\n"))
     correct = easy1 / easy2
     if answer == correct:
         print("Well done")
@@ -271,7 +272,7 @@ def easyDivision():
         easyDivisionOver()
 
 def easyDivisionOver():
-    nextGame = input("Press 1 to go again or 2 to switch mode")
+    nextGame = input("Press 1 to go again or 2 to switch mode:\n")
     if nextGame == "1":
         easyDivision()
     elif nextGame == "2":
@@ -283,7 +284,7 @@ def easyDivisionOver():
 def normalDivision():
     normal1 = random.randint(11,111)
     normal2 = random.randint(11,111)
-    answer = int(input(f"What is {normal1} / {normal2}?"))
+    answer = int(input(f"What is {normal1} / {normal2}?:\n"))
     correct = normal1 / normal2
     if answer == correct:
         print("Well done")
@@ -294,7 +295,7 @@ def normalDivision():
         normalDivision()
 
 def normalDivisionOver():
-    nextGame = input("Press 1 to go again or 2 to switch mode")
+    nextGame = input("Press 1 to go again or 2 to switch mode:\n")
     if nextGame == "1":
         normalDivision()
     elif nextGame == "2":
@@ -306,7 +307,7 @@ def normalDivisionOver():
 def hardDivision():
     hard1 = round(random.uniform(11,111),1)
     hard2 = round(random.uniform(11,111),1)
-    answer = float(input(f"What is {hard1} / {hard2}?"))
+    answer = float(input(f"What is {hard1} / {hard2}?:\n"))
     correct = hard1 / hard2
     if answer == correct:
         print("Well done")
@@ -317,7 +318,7 @@ def hardDivision():
         hardDivisionOver()
 
 def hardDivisionOver():
-    nextGame = input("Press 1 to go again or 2 to switch mode")
+    nextGame = input("Press 1 to go again or 2 to switch mode:\n")
     if nextGame == "1":
         hardDivision()
     elif nextGame == "2":
@@ -328,8 +329,84 @@ def hardDivisionOver():
 
 
 
+def endless():
+    difficulty = input("Select between Easy,Normal or Hard:")
+    print("type back at any point during the game to return the the main menu")
+    if difficulty == "Easy":
+        easyEndless()
+    elif difficulty == "Normal":
+        normalEndless()
+    elif difficulty == "Hard":
+        hardEndless()
+    else:
+        print("Please enter a valid option")
+        endless()
+
+def easyEndless():
+    easy1 = random.randint(1,10)
+    easy2 = random.randint(1,10)
+    answer = int(input(f"What is {easy1} + {easy2}?:\n"))
+    correct = easy1 + easy2
+    if answer == correct:
+        endless_score = endless_score + 1
+        easy1 = random.randint(1,10)
+        easy2 = random.randint(1,10)
+        answer = int(input(f"What is {easy1} - {easy2}?:\n"))
+        correct = easy1 - easy2
+        if answer == correct:
+            endless_score = endless_score + 1
+            easy1 = random.randint(1,10)
+            easy2 = random.randint(1,10)
+            answer = int(input(f"What is {easy1} / {easy2}?:\n"))
+            correct = easy1 / easy2
+            if answer == correct:
+                endless_score = endless_score + 1
+                easy1 = random.randint(1,10)
+                easy2 = random.randint(1,10)
+                answer = int(input(f"What is {easy1} + {easy2}?:\n"))
+                correct = easy1 + easy2
+                if answer == correct:
+                    endless_score = endless_score + 1
+                    easyEndless()
+                elif answer == "Back":
+                    print(f"you score was {endless_score}")
+                    game()
+                else:
+                    print("Incorrect, the right answer was")
+                    print(correct)
+                    print(f"you score was {endless_score}")
+                    endless_score = 0
+                    easyEndlessOver()
+            elif answer == "Back":
+                print(f"you score was {endless_score}")
+                game()
+            else:
+                print("Incorrect, the right answer was")
+                print(correct)
+                print(f"you score was {endless_score}")
+                endless_score = 0
+                easyEndlessOver()
+        elif answer == "Back":
+            print(f"you score was {endless_score}")
+            game()
+        else:
+            print("Incorrect, the right answer was")
+            print(correct)
+            print(f"you score was {endless_score}")
+            endless_score = 0
+            easyEndlessOver()
+    elif answer == "Back":
+        print(f"you score was {endless_score}")
+        game()
+    else:
+        print("Incorrect, the right answer was")
+        print(correct)
+        print(f"you score was {endless_score}")
+        endless_score = 0
+        easyEndlessOver()
+
 def game(): 
-    gamemode = input("Select gamemode")
+    gamemode = input("Select gamemode:\n")
     if gamemode == "1":
         addition()
     elif gamemode == "2":
@@ -338,6 +415,8 @@ def game():
         multiplication()
     elif gamemode == "4":
         division()  
+    elif gamemode == "5":
+        endless()
     else:
         print("Please enter a valid option")
         game()
