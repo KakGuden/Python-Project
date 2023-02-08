@@ -1,8 +1,6 @@
 import random
 
 
-
-
 def addition():
     difficulty = input("Select between Easy,Normal or Hard:\n")
     if difficulty == "Easy":
@@ -180,8 +178,8 @@ def multiplication():
 def easyMultiplication():
     easy1 = random.randint(1,10)
     easy2 = random.randint(1,10)
-    answer = int(input(f"What is {easy1} * {easy2}?:\n"))
-    correct = easy1 * easy2
+    answer = float(input(f"What is {easy1} * {easy2}?:\n"))
+    correct = round(easy1 * easy2,2)
     if answer == correct:
         print("Well done")
         easyMultiplicationOver()
@@ -203,8 +201,8 @@ def easyMultiplicationOver():
 def normalMultiplication():
     normal1 = random.randint(11,111)
     normal2 = random.randint(11,111)
-    answer = int(input(f"What is {normal1} * {normal2}?:\n"))
-    correct = normal1 * normal2
+    answer = float(input(f"What is {normal1} * {normal2}?:\n"))
+    correct = round(normal1 * normal2,2)
     if answer == correct:
         print("Well done")
         normalMultiplicationOver()
@@ -227,7 +225,7 @@ def hardMultiplication():
     hard1 = round(random.uniform(11,111),1)
     hard2 = round(random.uniform(11,111),1)
     answer = float(input(f"What is {hard1} * {hard2}?:\n"))
-    correct = hard1 * hard2
+    correct = round(hard1 * hard2,2)
     if answer == correct:
         print("Well done")
         hardMultiplicationOver()
@@ -261,8 +259,8 @@ def division():
 def easyDivision():
     easy1 = random.randint(1,10)
     easy2 = random.randint(1,10)
-    answer = int(input(f"What is {easy1} / {easy2}?:\n"))
-    correct = easy1 / easy2
+    answer = float(input(f"What is {easy1} / {easy2}?:\n"))
+    correct = round(easy1 / easy2,2)
     if answer == correct:
         print("Well done")
         easyDivisionOver()
@@ -284,8 +282,8 @@ def easyDivisionOver():
 def normalDivision():
     normal1 = random.randint(11,111)
     normal2 = random.randint(11,111)
-    answer = int(input(f"What is {normal1} / {normal2}?:\n"))
-    correct = normal1 / normal2
+    answer = int(float(f"What is {normal1} / {normal2}?:\n"))
+    correct = round(normal1 / normal2,2)
     if answer == correct:
         print("Well done")
         normalDivision()
@@ -308,7 +306,7 @@ def hardDivision():
     hard1 = round(random.uniform(11,111),1)
     hard2 = round(random.uniform(11,111),1)
     answer = float(input(f"What is {hard1} / {hard2}?:\n"))
-    correct = hard1 / hard2
+    correct = round(hard1 / hard2,2)
     if answer == correct:
         print("Well done")
         hardDivisionOver()
@@ -331,7 +329,6 @@ def hardDivisionOver():
 
 def endless():
     difficulty = input("Select between Easy,Normal or Hard:")
-    print("type back at any point during the game to return the the main menu")
     if difficulty == "Easy":
         easyEndless()
     elif difficulty == "Normal":
@@ -342,67 +339,45 @@ def endless():
         print("Please enter a valid option")
         endless()
 
+
+
 def easyEndless():
     easy1 = random.randint(1,10)
     easy2 = random.randint(1,10)
     answer = int(input(f"What is {easy1} + {easy2}?:\n"))
     correct = easy1 + easy2
     if answer == correct:
-        endless_score = endless_score + 1
         easy1 = random.randint(1,10)
         easy2 = random.randint(1,10)
         answer = int(input(f"What is {easy1} - {easy2}?:\n"))
         correct = easy1 - easy2
         if answer == correct:
-            endless_score = endless_score + 1
             easy1 = random.randint(1,10)
             easy2 = random.randint(1,10)
-            answer = int(input(f"What is {easy1} / {easy2}?:\n"))
-            correct = easy1 / easy2
+            answer = float(input(f"What is {easy1} * {easy2}?:\n"))
+            correct = round(easy1 * easy2,2)
             if answer == correct:
-                endless_score = endless_score + 1
                 easy1 = random.randint(1,10)
                 easy2 = random.randint(1,10)
-                answer = int(input(f"What is {easy1} + {easy2}?:\n"))
-                correct = easy1 + easy2
+                answer = float(input(f"What is {easy1} / {easy2}?:\n"))
+                correct = round(easy1 / easy2,2)
                 if answer == correct:
-                    endless_score = endless_score + 1
                     easyEndless()
-                elif answer == "Back":
-                    print(f"you score was {endless_score}")
-                    game()
                 else:
                     print("Incorrect, the right answer was")
                     print(correct)
-                    print(f"you score was {endless_score}")
-                    endless_score = 0
                     easyEndlessOver()
-            elif answer == "Back":
-                print(f"you score was {endless_score}")
-                game()
             else:
                 print("Incorrect, the right answer was")
                 print(correct)
-                print(f"you score was {endless_score}")
-                endless_score = 0
                 easyEndlessOver()
-        elif answer == "Back":
-            print(f"you score was {endless_score}")
-            game()
         else:
             print("Incorrect, the right answer was")
             print(correct)
-            print(f"you score was {endless_score}")
-            endless_score = 0
             easyEndlessOver()
-    elif answer == "Back":
-        print(f"you score was {endless_score}")
-        game()
     else:
         print("Incorrect, the right answer was")
         print(correct)
-        print(f"you score was {endless_score}")
-        endless_score = 0
         easyEndlessOver()
 
 def game(): 
