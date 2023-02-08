@@ -437,6 +437,54 @@ def normalEndlessOver():
         print("Please select a valid option")
         normalEndlessOver()
 
+def hardEndless():
+    hard1 = round(random.uniform(11,111),1)
+    hard2 = round(random.uniform(11,111),1)
+    answer = int(input(f"What is {hard1} + {hard2}?:\n"))
+    correct = hard1 + hard2
+    if answer == correct:
+        hard1 = round(random.uniform(11,111),1)
+        hard2 = round(random.uniform(11,111),1)
+        answer = int(input(f"What is {hard1} - {hard2}?:\n"))
+        correct = hard1 - hard2
+        if answer == correct:
+            hard1 = round(random.uniform(11,111),1)
+            hard2 = round(random.uniform(11,111),1)
+            answer = float(input(f"What is {hard1} * {hard2}?:\n"))
+            correct = round(hard1 * hard2,2)
+            if answer == correct:
+                hard1 = round(random.uniform(11,111),1)
+                hard2 = round(random.uniform(11,111),1)
+                answer = float(input(f"What is {hard1} / {hard2}?:\n"))
+                correct = round(hard1 / hard2,2)
+                if answer == correct:
+                    hardEndless()
+                else:
+                    print("Incorrect, the right answer was")
+                    print(correct)
+                    hardEndlessOver()
+            else:
+                print("Incorrect, the right answer was")
+                print(correct)
+                hardEndlessOver()
+        else:
+            print("Incorrect, the right answer was")
+            print(correct)
+            hardEndlessOver()
+    else:
+        print("Incorrect, the right answer was")
+        print(correct)
+        hardEndlessOver()
+        
+def hardEndlessOver():
+    nextGame = input("Press 1 to go again or 2 to switch mode:\n")
+    if nextGame == "1":
+        hardEndless()
+    elif nextGame == "2":
+        game()
+    else:
+        print("Please select a valid option")
+        hardEndlessOver()
 
 def game(): 
     gamemode = input("Select gamemode:\n")
