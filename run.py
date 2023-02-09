@@ -1,6 +1,5 @@
 import random
 
-
 def addition():
     difficulty = input("Select between Easy,Normal or Hard:\n")
     if difficulty == "Easy":
@@ -282,7 +281,7 @@ def easyDivisionOver():
 def normalDivision():
     normal1 = random.randint(11,111)
     normal2 = random.randint(11,111)
-    answer = int(float(f"What is {normal1} / {normal2}?:\n"))
+    answer = float(input(f"What is {normal1} / {normal2}?:\n"))
     correct = round(normal1 / normal2,2)
     if answer == correct:
         print("Well done")
@@ -440,12 +439,12 @@ def normalEndlessOver():
 def hardEndless():
     hard1 = round(random.uniform(11,111),1)
     hard2 = round(random.uniform(11,111),1)
-    answer = int(input(f"What is {hard1} + {hard2}?:\n"))
-    correct = hard1 + hard2
+    answer = float(input(f"What is {hard1} + {hard2}?:\n"))
+    correct = hard1 + hard2,
     if answer == correct:
         hard1 = round(random.uniform(11,111),1)
         hard2 = round(random.uniform(11,111),1)
-        answer = int(input(f"What is {hard1} - {hard2}?:\n"))
+        answer = float(input(f"What is {hard1} - {hard2}?:\n"))
         correct = hard1 - hard2
         if answer == correct:
             hard1 = round(random.uniform(11,111),1)
@@ -487,7 +486,9 @@ def hardEndlessOver():
         hardEndlessOver()
 
 def game(): 
+    print("1 for Addition, 2 for Subtraction, 3 for multiplication, 4 for dicision and 5 for endless")
     gamemode = input("Select gamemode:\n")
+    print("all answers are rounded to the second decimal")
     if gamemode == "1":
         addition()
     elif gamemode == "2":
