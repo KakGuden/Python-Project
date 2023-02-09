@@ -1,6 +1,7 @@
 import random
 
 
+# Addition Difficulty
 def addition():
     difficulty = input("Select between Easy,Normal or Hard:\n")
     if difficulty == "Easy":
@@ -14,6 +15,7 @@ def addition():
         addition()
 
 
+# Easy Addition Mode
 def easyAddition():
     easy1 = random.randint(1, 10)
     easy2 = random.randint(1, 10)
@@ -39,6 +41,7 @@ def easyAdditionOver():
         easyAdditionOver()
 
 
+# Normal Addition Mode
 def normalAddition():
     normal1 = random.randint(11, 111)
     normal2 = random.randint(11, 111)
@@ -64,6 +67,7 @@ def normalAdditionOver():
         normalAdditionOver()
 
 
+# Hard Addition Mode
 def hardAddition():
     hard1 = round(random.uniform(11, 111), 1)
     hard2 = round(random.uniform(11, 111), 1)
@@ -89,6 +93,7 @@ def hardAdditionOver():
         hardAdditionOver()
 
 
+# Subtraction Difficulty
 def subtraction():
     difficulty = input("Select between Easy,Normal or Hard:\n")
     if difficulty == "Easy":
@@ -102,6 +107,7 @@ def subtraction():
         subtraction()
 
 
+# Easy Subtraction Mode
 def easySubtraction():
     easy1 = random.randint(1, 10)
     easy2 = random.randint(1, 10)
@@ -127,6 +133,7 @@ def easySubtractionOver():
         easySubtractionOver()
 
 
+# Normal Subtraction Mode
 def normalSubtraction():
     normal1 = random.randint(11, 111)
     normal2 = random.randint(11, 111)
@@ -152,6 +159,7 @@ def normalSubtractionOver():
         normalSubtractionOver()
 
 
+# Hard Subtraction Mode
 def hardSubtraction():
     hard1 = round(random.uniform(11, 111), 1)
     hard2 = round(random.uniform(11, 111), 1)
@@ -177,6 +185,7 @@ def hardSubtractionOver():
         hardSubtractionOver()
 
 
+# Multiplication Difficulty
 def multiplication():
     difficulty = input("Select between Easy,Normal or Hard:\n")
     if difficulty == "Easy":
@@ -190,6 +199,7 @@ def multiplication():
         multiplication()
 
 
+# Easy Multiplication Mode
 def easyMultiplication():
     easy1 = random.randint(1, 10)
     easy2 = random.randint(1, 10)
@@ -215,6 +225,7 @@ def easyMultiplicationOver():
         easyMultiplicationOver()
 
 
+# Normal Multiplication Mode
 def normalMultiplication():
     normal1 = random.randint(11, 111)
     normal2 = random.randint(11, 111)
@@ -240,6 +251,7 @@ def normalMultiplicationOver():
         normalMultiplicationOver()
 
 
+# Hard Multiplication Mode
 def hardMultiplication():
     hard1 = round(random.uniform(11, 111), 1)
     hard2 = round(random.uniform(11, 111), 1)
@@ -265,6 +277,7 @@ def hardMultiplicationOver():
         hardMultiplicationOver()
 
 
+# Division Difficulty
 def division():
     difficulty = input("Select between Easy,Normal or Hard:\n")
     if difficulty == "Easy":
@@ -278,6 +291,7 @@ def division():
         division()
 
 
+# Easy Division Mode
 def easyDivision():
     easy1 = random.randint(1, 10)
     easy2 = random.randint(1, 10)
@@ -303,6 +317,7 @@ def easyDivisionOver():
         easyDivisionOver()
 
 
+# Normal Division Mode
 def normalDivision():
     normal1 = random.randint(11, 111)
     normal2 = random.randint(11, 111)
@@ -328,6 +343,7 @@ def normalDivisionOver():
         normalDivisionOver()
 
 
+# Hard Division Mode
 def hardDivision():
     hard1 = round(random.uniform(11, 111), 1)
     hard2 = round(random.uniform(11, 111), 1)
@@ -353,6 +369,7 @@ def hardDivisionOver():
         hardDivisionOver()
 
 
+# Endless mode picking difficulty
 def endless():
     difficulty = input("Select between Easy,Normal or Hard:")
     if difficulty == "Easy":
@@ -366,6 +383,7 @@ def endless():
         endless()
 
 
+# Easy Endless Mode
 def easyEndless():
     easy1 = random.randint(1, 10)
     easy2 = random.randint(1, 10)
@@ -417,6 +435,7 @@ def easyEndlessOver():
         easyEndlessOver()
 
 
+# Normal Endless Mode
 def normalEndless():
     normal1 = random.randint(11, 111)
     normal2 = random.randint(11, 111)
@@ -468,6 +487,7 @@ def normalEndlessOver():
         normalEndlessOver()
 
 
+# Hard Endless Mode
 def hardEndless():
     hard1 = round(random.uniform(11, 111), 1)
     hard2 = round(random.uniform(11, 111), 1)
@@ -519,6 +539,7 @@ def hardEndlessOver():
         hardEndlessOver()
 
 
+# Game fuction where you pick the game mode
 def game():
     print("All text inputs needs to be capitalized")
     print("Addition, Subtraction, Multiplication, Division, Endless")
