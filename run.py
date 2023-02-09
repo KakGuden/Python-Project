@@ -489,7 +489,8 @@ def game():
     print("All text inputs needs to be capitalized")
     print("Addition, Subtraction, Multiplication, Division, Endless")
     gamemode = input("Select gamemode:\n")
-    print("all answers are rounded to the second decimal")
+    print("All answers are rounded to the second decimal")
+    print("Decimal numbers are writen with a . insted of a ,")
     if gamemode == "Addition":
         addition()
     elif gamemode == "Subtraction":
