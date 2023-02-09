@@ -123,11 +123,11 @@ def normalSubtraction():
     correct = normal1 - normal2
     if answer == correct:
         print("Well done")
-        normalSubtraction()
+        normalSubtractionOver()
     else:
         print("Incorrect, the right answer was")
         print(correct)
-        normalSubtraction()
+        normalSubtractionOver()
 
 def normalSubtractionOver():
     nextGame = input("Press 1 to go again or 2 to switch mode:\n")
@@ -143,7 +143,7 @@ def hardSubtraction():
     hard1 = round(random.uniform(11,111),1)
     hard2 = round(random.uniform(11,111),1)
     answer = float(input(f"What is {hard1} - {hard2}?:\n"))
-    correct = hard1 - hard2
+    correct = round(hard1 - hard2,1)
     if answer == correct:
         print("Well done")
         hardSubtractionOver()
@@ -177,7 +177,7 @@ def multiplication():
 def easyMultiplication():
     easy1 = random.randint(1,10)
     easy2 = random.randint(1,10)
-    answer = float(input(f"What is {easy1} * {easy2}?:\n"))
+    answer = float(input(f"What is {easy1} x {easy2}?:\n"))
     correct = round(easy1 * easy2,2)
     if answer == correct:
         print("Well done")
@@ -200,7 +200,7 @@ def easyMultiplicationOver():
 def normalMultiplication():
     normal1 = random.randint(11,111)
     normal2 = random.randint(11,111)
-    answer = float(input(f"What is {normal1} * {normal2}?:\n"))
+    answer = float(input(f"What is {normal1} x {normal2}?:\n"))
     correct = round(normal1 * normal2,2)
     if answer == correct:
         print("Well done")
@@ -223,7 +223,7 @@ def normalMultiplicationOver():
 def hardMultiplication():
     hard1 = round(random.uniform(11,111),1)
     hard2 = round(random.uniform(11,111),1)
-    answer = float(input(f"What is {hard1} * {hard2}?:\n"))
+    answer = float(input(f"What is {hard1} x {hard2}?:\n"))
     correct = round(hard1 * hard2,2)
     if answer == correct:
         print("Well done")
@@ -285,7 +285,7 @@ def normalDivision():
     correct = round(normal1 / normal2,2)
     if answer == correct:
         print("Well done")
-        normalDivision()
+        normalDivisionOver()
     else:
         print("Incorrect, the right answer was")
         print(correct)
@@ -351,7 +351,7 @@ def easyEndless():
         if answer == correct:
             easy1 = random.randint(1,10)
             easy2 = random.randint(1,10)
-            answer = float(input(f"What is {easy1} * {easy2}?:\n"))
+            answer = float(input(f"What is {easy1} x {easy2}?:\n"))
             correct = round(easy1 * easy2,2)
             if answer == correct:
                 easy1 = random.randint(1,10)
@@ -400,7 +400,7 @@ def normalEndless():
         if answer == correct:
             normal1 = random.randint(11,111)
             normal2 = random.randint(11,111)
-            answer = float(input(f"What is {normal1} * {normal2}?:\n"))
+            answer = float(input(f"What is {normal1} x {normal2}?:\n"))
             correct = round(normal1 * normal2,2)
             if answer == correct:
                 normal1 = random.randint(11,111)
@@ -440,16 +440,16 @@ def hardEndless():
     hard1 = round(random.uniform(11,111),1)
     hard2 = round(random.uniform(11,111),1)
     answer = float(input(f"What is {hard1} + {hard2}?:\n"))
-    correct = hard1 + hard2,
+    correct = round(hard1 + hard2,1)
     if answer == correct:
         hard1 = round(random.uniform(11,111),1)
         hard2 = round(random.uniform(11,111),1)
         answer = float(input(f"What is {hard1} - {hard2}?:\n"))
-        correct = hard1 - hard2
+        correct = round(hard1 + hard2,1)
         if answer == correct:
             hard1 = round(random.uniform(11,111),1)
             hard2 = round(random.uniform(11,111),1)
-            answer = float(input(f"What is {hard1} * {hard2}?:\n"))
+            answer = float(input(f"What is {hard1} x {hard2}?:\n"))
             correct = round(hard1 * hard2,2)
             if answer == correct:
                 hard1 = round(random.uniform(11,111),1)
@@ -486,18 +486,19 @@ def hardEndlessOver():
         hardEndlessOver()
 
 def game(): 
-    print("1 for Addition, 2 for Subtraction, 3 for multiplication, 4 for dicision and 5 for endless")
+    print("All text inputs needs to be capitalized")
+    print("Addition, Subtraction, Multiplication, Division, Endless")
     gamemode = input("Select gamemode:\n")
     print("all answers are rounded to the second decimal")
-    if gamemode == "1":
+    if gamemode == "Addition":
         addition()
-    elif gamemode == "2":
+    elif gamemode == "Subtraction":
         subtraction()
-    elif gamemode == "3":
+    elif gamemode == "Multiplication":
         multiplication()
-    elif gamemode == "4":
+    elif gamemode == "Division":
         division()  
-    elif gamemode == "5":
+    elif gamemode == "Endless":
         endless()
     else:
         print("Please enter a valid option")
